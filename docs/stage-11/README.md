@@ -6,10 +6,11 @@
 make backend-shell
 ```
 
-Выполнить консольную команду:
+Выполнить консольные команды:
 
 ```
 composer require laravel/telescope
+php artisan vendor:publish --tag=telescope-config
 ```
 
 Добавить данные для отдельной БД логирования в `config/database`:
@@ -29,6 +30,17 @@ composer require laravel/telescope
     'search_path' => 'public',
     'sslmode' => 'prefer',
 ],
+```
+
+Изменить БД по-умолчанию в `config/telescope.php`:
+
+```
+'storage' => [
+    'database' => [
+        'connection' => env('DB_CONNECTION_TELESCOPE', 'mysql'),
+        'chunk' => 1000,
+    ],
+]
 ```
 
 И выполнить миграции:

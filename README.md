@@ -14,3 +14,4 @@
 - [Этап 10 - Установка PHP Pest](docs/stage-10/README.md)
 - [Этап 11 - Установка Laravel Telescope](docs/stage-11/README.md)
 - [Этап 12 - Проверка корректности кода](docs/stage-12/README.md)
+- [Этап 13 - Доступ к БД через PHPStorm](docs/stage-13/README.md)
