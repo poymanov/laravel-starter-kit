@@ -53,6 +53,9 @@ backend-create-storage:
 backend-test:
 	docker-compose run --rm php-cli composer test
 
+backend-test-coverage:
+	docker-compose run --rm php-cli composer test-coverage
+
 backend-shell:
 	docker-compose run --rm php-cli bash
 

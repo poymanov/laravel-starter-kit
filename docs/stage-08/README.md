@@ -1,8 +1,21 @@
-# Этап 8 - Настройка PHPUnit
+# Этап 7 - Установка Larastan
 
-Заменить соответствующие строки в `phpunit.xml`:
+Выполнить консольную команду, чтобы зайти внутрь контейнера с php:
 
 ```
-<env name="DB_CONNECTION" value="sqlite"/>
-<env name="DB_DATABASE" value=":memory:"/>
+make backend-shell
 ```
+
+Выполнить консольную команду:
+
+```
+composer require --dev nunomaduro/larastan
+```
+
+Добавить в composer.json, в `scripts`:
+
+```
+"phpstan": "phpstan analyse",
+```
+
+Скопировать `phpstan.neon.dist` в корень проекта.

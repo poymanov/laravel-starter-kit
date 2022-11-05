@@ -36,7 +36,7 @@ services:
             - POSTGRES_USER=db
             - POSTGRES_PASSWORD=db
             - POSTGRES_DB=db
-            - POSTGRES_MULTIPLE_DATABASES="db-telescope"
+            - POSTGRES_MULTIPLE_DATABASES=db_telescope, db_test
         ports:
             - "5432:5432"
     redis:

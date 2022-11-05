@@ -43,6 +43,13 @@ php artisan vendor:publish --tag=telescope-config
 ]
 ```
 
+Добавить в `.env.example` и `.env`:
+
+```
+DB_CONNECTION_TELESCOPE=pgsql-telescope
+DB_DATABASE_TELESCOPE=db-telescope
+```
+
 И выполнить миграции:
 
 ```

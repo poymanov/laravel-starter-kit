@@ -1,10 +1,11 @@
-# Этап 6 - Настройка Laravel Pint
+# Этап 6 - Актуализация версии PHP в composer.json
 
-Скопировать `pint.json` в корень проекта.
+Открыть главную страницу приложения - localhost:8080.
 
-Добавить в `composer.json`, в `scripts`:
+Узнать текущую версию PHP:
+![](img/01.png)
 
+Актуализировать версию PHP в `composer.json`:
 ```
-"pint": "vendor/bin/pint --test",
-"pint-fix": "vendor/bin/pint",
+composer require php:^8.1.6
 ```

@@ -1,21 +1,10 @@
-# Этап 7 - Установка Larastan
+# Этап 6 - Настройка Laravel Pint
 
-Выполнить консольную команду, чтобы зайти внутрь контейнера с php:
+Скопировать `pint.json` в корень проекта.
 
-```
-make backend-shell
-```
-
-Выполнить консольную команду:
+Добавить в `composer.json`, в `scripts`:
 
 ```
-composer require --dev nunomaduro/larastan
+"pint": "vendor/bin/pint --test",
+"pint-fix": "vendor/bin/pint",
 ```
-
-Добавить в composer.json, в `scripts`:
-
-```
-"phpstan": "phpstan analyse",
-```
-
-Скопировать `phpstan.neon.dist` в корень проекта.
