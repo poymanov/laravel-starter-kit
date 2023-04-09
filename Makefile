@@ -93,10 +93,10 @@ backend-ide-helper: backend-ide-helper-generate backend-ide-helper-models backen
 frontend-clear:
 	docker run --rm -v ${PWD}:/app -w /app alpine sh -c 'rm -rf .ready'
 
-frontend-init: frontend-npm-install frontend-ready
+frontend-init: frontend-yarn-install frontend-ready
 
-frontend-npm-install:
-	docker-compose run --rm node-cli npm install
+frontend-yarn-install:
+	docker-compose run --rm node-cli yarn install
 
 frontend-ready:
 	docker run --rm -v ${PWD}:/app -w /app alpine touch .ready

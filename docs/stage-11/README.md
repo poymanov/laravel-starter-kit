@@ -47,7 +47,7 @@ php artisan vendor:publish --tag=telescope-config
 
 ```
 DB_CONNECTION_TELESCOPE=pgsql-telescope
-DB_DATABASE_TELESCOPE=db-telescope
+DB_DATABASE_TELESCOPE=db_telescope
 ```
 
 И выполнить миграции:

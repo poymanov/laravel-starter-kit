@@ -39,13 +39,13 @@ Do you trust "pestphp/pest-plugin" to execute code and wish to enable it now? (w
 
 Нажать `y`.
 
+Удалить файлы в директориях - `tests/Feature` и `test/Unit`.
+
 Выполнить:
 
 ```
-php artisan pest:install
+./vendor/bin/pest --init
 ```
-
-Скопировать директории - `tests/Feature` и `test/Unit`.
 
 Добавить в `composer.json`, в `scripts`:
 
@@ -58,10 +58,10 @@ php artisan pest:install
 
 ```
 <env name="DB_CONNECTION" value="pgsql-test"/>
-<env name="DB_DATABASE_TEST" value="db-test"/>
+<env name="DB_DATABASE_TEST" value="db_test"/>
 ```
 
-Там же, в блок добавить:
+Там же, в блок `<coverage processUncoveredFiles="true">` добавить:
 ```
 <report>
     <html outputDirectory="tests/Coverage/html"/>
