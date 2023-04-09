@@ -33,6 +33,12 @@ jobs:
       - name: Install Composer dependencies
         run: composer install --prefer-dist --no-interaction
 
+      - name: Install NPM dependencies
+        run: yarn install
+
+      - name: Build assets
+        run: yarn run build
+
       - name: Copy environment file
         run: cp .env.github-actions .env
 
